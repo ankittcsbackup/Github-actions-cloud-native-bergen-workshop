@@ -14,7 +14,7 @@ jobs:
     name: Say Hello
 
     # Which type of machine to run the job on (other options include `windows-latest` and `macos-latest`)
-    runs-on: ubuntu-latest, window-latest
+    runs-on: ubuntu-latest
 
     steps:
       # As with workflow and job names, step names are optional but recommended.
