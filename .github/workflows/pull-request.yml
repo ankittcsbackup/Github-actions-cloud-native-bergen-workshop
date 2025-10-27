@@ -1,4 +1,26 @@
-name: pull-request.yml
+name: Pull Request Workflow
 on:
+  - pull_request
 
 jobs:
+  say-hello:
+    name: Say Hello
+
+    # Which type of machine to run the job on (other options include `windows-latest` and `macos-latest`)
+    runs-on: ubuntu-latest
+
+    steps:
+      # As with workflow and job names, step names are optional but recommended.
+      # In case you need to debug your workflow later, having descriptive names is very helpful.
+      - name: Print greeting
+        run: echo "Hello, GitHub Actions! Welcome to the workshop!"
+
+      - name: Print date and time
+        run: date
+
+      - name: Print system information
+        run: |
+          echo "Running on:"
+          uname -a
+
+
